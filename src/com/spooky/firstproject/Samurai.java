@@ -1,10 +1,11 @@
 package com.spooky.firstproject;
 
-public class Samurai {
+public class Samurai extends Human{
 	int health = 200;
-	public void deathBlow(Human param) {
+	public int deathBlow(Samurai param) {
 		this.health /= 2;
 		param.health = 0;
+		return param.health;
 	}
 	public void meditate() {
 		this.health += this.health/2;
